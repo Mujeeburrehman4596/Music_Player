@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Music Player</h1>
+        <div class="music-player">
+            <div class="player-info mb-4 text-center">
+                <img id="album-cover" src="covers/cover1.jpg" alt="Album Cover" class="img-fluid rounded-circle mb-3">
+                <h2 id="track-title">Track Title</h2>
+                <p id="track-artist">Artist Name</p>
+            </div>
+            <div class="player-controls d-flex justify-content-center align-items-center mb-4">
+                <button class="btn btn-dark" id="prev-track"><i class="bi bi-skip-backward"></i></button>
+                <button class="btn btn-primary" id="play-pause"><i class="bi bi-play-fill"></i></button>
+                <button class="btn btn-dark" id="next-track"><i class="bi bi-skip-forward"></i></button>
+                <button class="btn btn-danger ms-3" id="stop"><i class="bi bi-stop-fill"></i></button>
+            </div>
+            <div class="progress-container mb-4">
+                <input type="range" class="form-range" id="progress-bar" min="0" max="100" step="0.1" value="0">
+            </div>
+            <div class="volume-container d-flex justify-content-center align-items-center">
+                <label for="volume" class="me-2">Volume:</label>
+                <input type="range" class="form-range" id="volume" min="0" max="1" step="0.01" value="1">
+            </div>
+            <ul class="playlist list-group mt-4">
+                <!-- Playlist items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
